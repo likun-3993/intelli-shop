@@ -48,7 +48,7 @@ function Login() {
         <div className={styles.log}>Sign Up</div>
       </Link>
       <div className={styles.contain}>
-        <h1 className="headline">Login Page</h1>
+        <h1 className={styles.headline}>Login Page</h1>
         <p className={styles.marker}>Email</p>
         <input
           type="email"

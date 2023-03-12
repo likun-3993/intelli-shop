@@ -71,7 +71,7 @@ function Signup() {
         <div className={styles.log}>Login</div>
       </Link>
       <div className={styles.contain}>
-        <h1 className="headLine">Sign Up </h1>
+        <h1 className={styles.headLine}>Sign Up </h1>
         <p className={styles.marker}>Email</p>
         <input
           type="email"
@@ -108,11 +108,11 @@ function Signup() {
           onChange={handlePassword}
         />
         <div className={styles.button}>
-          {check &&
+          {check && (
             <Link to="/shop" state={{ id: email }} className={styles.link}>
-            Signup
+              Signup
             </Link>
-          }
+          )}
           {!check && p}
         </div>
       </div>
