@@ -12,6 +12,12 @@ function Login() {
   const [password, setPassword] = useState("");
   const [check, setCheck] = useState(false);
 
+  const logIdentity = () => {
+    
+    window.analytics.identify(email);
+    window.analytics.track("LOG IN", { $os: "Windows" });
+  };
+
   // const mix = () => {
   //   if (check) {
   //     mixpanel.identify(email);
@@ -63,7 +69,7 @@ function Login() {
           value={password}
           onChange={handlePassword}
         />
-        <div className={styles.button}>
+        <div className={styles.button} onClick={logIdentity}>
           {check && (
             <Link to="/shop" className={styles.link} state={{ id: email }}>
               Login

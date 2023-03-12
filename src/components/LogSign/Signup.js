@@ -9,8 +9,19 @@ function Signup() {
   const [lName, setLName] = useState("");
   const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
-
   const [check, setCheck] = useState(false);
+
+  const signPage = () => {
+    window.analytics.alias(email);
+    window.analytics.track("Signup", {
+      $os: "Windows",
+      $first_name: fName,
+      $last_name: lName,
+      $phone: number,
+      $email: email,
+    });
+    // console.log('hi')
+  };
 
   // const mix = () => {
   //   var pass = 100;
@@ -107,7 +118,7 @@ function Signup() {
           value={password}
           onChange={handlePassword}
         />
-        <div className={styles.button}>
+        <div className={styles.button} onClick={signPage}>
           {check && (
             <Link to="/shop" state={{ id: email }} className={styles.link}>
               Signup
