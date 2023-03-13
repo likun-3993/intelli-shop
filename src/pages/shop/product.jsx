@@ -16,7 +16,11 @@ export const Product = (props) => {
         </p>
         <p> ${price}</p>
       </div>
-      <button className="addToCartBttn" onClick={() => addToCart(id)}>
+      <button className="addToCartBttn" onClick={() => {
+        addToCart(id);
+        window.analytics.track("cart", { productName });
+
+      }}>
         Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
       </button>
     </div>

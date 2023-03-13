@@ -13,7 +13,8 @@ const getDefaultCart = () => {
 
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
-  const [l,setLog]=useState(false)
+  const [search,setSearch]=useState(false);
+  const [val,setVal]=useState('');
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -43,14 +44,16 @@ export const ShopContextProvider = (props) => {
   };
 
   const contextValue = {
-    l,
+    search,
     cartItems,
+    val,
+    setVal,
     addToCart,
     updateCartItemCount,
     removeFromCart,
     getTotalCartAmount,
     checkout,
-    setLog
+    setSearch
   };
 
   return (

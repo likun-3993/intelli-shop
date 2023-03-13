@@ -19,3 +19,22 @@
   margin-left: 20px;
   font-size: 25px;
 }
+
+.sbar {
+  padding: 8px;
+  border-radius: 20px;
+  width: 250px;
+}
+
+.sicon {
+  position: relative;
+  right: 40px;
+  padding: 2px 5px;
+  border: 1px solid #F0EEED;
+  border-radius: 50%;
+  background-color: #F0EEED;
+}
+
+.sicon:hover {
+  cursor: pointer;
+}

@@ -34,6 +34,7 @@ export const Cart = () => {
             onClick={() => {
               checkout();
               navigate("/checkout");
+              window.analytics.track("checkout");
             }}
           >
             {" "}
