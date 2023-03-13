@@ -15,12 +15,11 @@ function Signup() {
     window.analytics.alias(email);
     window.analytics.track("Signup", {
       $os: "Windows",
-      $first_name: fName,
-      $last_name: lName,
-      $phone: number,
-      $email: email,
+      // $first_name: fName,
+      // $last_name: lName,
+      // $phone: number,
+      // $email: email,
     });
-    // console.log('hi')
   };
 
   // const mix = () => {

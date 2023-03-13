@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { PRODUCTS } from "../../products";
 import { CartItem } from "./cart-item";
@@ -7,9 +7,8 @@ import { Navbar } from "../../components/navbar";
 
 import "./cart.css";
 export const Cart = () => {
-  const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
+  const { cartItems, getTotalCartAmount, checkout,l,setLog } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
-
   const navigate = useNavigate();
 
   return (
