@@ -13,9 +13,17 @@ function Login() {
   const [check, setCheck] = useState(false);
 
   const logIdentity = () => {
-    
     window.analytics.identify(email);
     window.analytics.track("LOG IN", { $os: "Windows" });
+    // window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      "event": "Login",
+      "user_id": "20002081012",
+    });
+    // dataLayer.push({
+    //   event: "Login",
+    //   user_id: "20002081012",
+    // }
   };
 
   // const mix = () => {
