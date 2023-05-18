@@ -49,7 +49,7 @@ function Login() {
 
   const valid = () => {
     if (email !== "" && password !== "") {
-      setCheck(true);
+      setTimeout(setCheck(true), 5000);
     } else setCheck(false);
   };
 
